@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   try {
     if (query) {
-      const foundQuery = jobs.filter((job: IJob) => job.level.toLowerCase()  === query);
+      const foundQuery = jobs.filter((job: IJob) => job.level.toLowerCase() === query);
       return Response.json(foundQuery);
     }
     return Response.json(jobs);

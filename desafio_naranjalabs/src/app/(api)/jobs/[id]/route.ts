@@ -9,11 +9,10 @@ export async function GET(req: NextRequest,
   const id = +params.id;
 
   try {
-    const foundJobs = jobs.find((job:IJob) => job.id === id);
+    const foundJobs = jobs.find((job: IJob) => job.id === id);
     if (!foundJobs) {
       return Response.json(
-        { success: false,
-          message: 'No job was found' },
+        { message: 'No job was found.' },
         { status: 404 }
       );
     }
