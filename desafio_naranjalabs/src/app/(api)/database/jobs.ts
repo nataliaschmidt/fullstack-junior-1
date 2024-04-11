@@ -24,3 +24,5 @@ const jobs = [
     status: 'closed',
   },
 ];
+
+export default jobs;
