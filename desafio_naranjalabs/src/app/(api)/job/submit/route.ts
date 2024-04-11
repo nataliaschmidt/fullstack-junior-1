@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     return Response.json({ message: `Thank you for your application, ${data.name}` },
       { status: 200 });
-  }  catch (error) {
+  } catch (error) {
     return Response.json({
       message: `${error}`
     });
