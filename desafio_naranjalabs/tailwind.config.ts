@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "pink-personal": "#DC0155",
+        "white-button-hero": "#F4F3F8",
       },
     },
   },
