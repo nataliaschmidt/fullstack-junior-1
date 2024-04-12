@@ -13,13 +13,14 @@ export default function Left() {
       <h1
         className={`text-[120px] font-normal leading-[120px] ${bebasNeue.className} `}
       >
-        <span className="text-pink-personal">Luxe</span> IS HERE TO BE YOUR ASSISTANCE
+        <span className="text-pink-personal">Luxe</span> IS HERE TO BE YOUR
+        ASSISTANCE
       </h1>
       <p className="text-2xl font-normal leading-10">
         I am here ready to help you in making creative digital products
       </p>
 
-      <button className="absolute bottom-6 left-0 h-[60px] w-[180px] rounded-[36px] bg-pink-personal p-2 text-[18px] font-normal leading-[27px] text-white-button-hero">
+      <button className="mt-10 h-[60px] w-[180px] rounded-[36px] bg-pink-personal p-2 text-[18px] font-normal leading-[27px] text-white-hero">
         Let&apos;s Discuss
       </button>
     </div>

@@ -10,7 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         "pink-personal": "#DC0155",
-        "white-button-hero": "#F4F3F8",
+        "white-hero": "#F4F3F8",
+      },
+      boxShadow: {
+        'profile-shadow': '0px 24px 50px 0px rgba(13, 12, 56, 0.15)',
       },
     },
   },
