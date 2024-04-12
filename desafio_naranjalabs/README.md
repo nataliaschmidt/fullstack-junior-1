@@ -123,7 +123,7 @@ Quando o id é existente retorna o trabalho correspondente ao id da pesquisa
 Essa rota deverá receber um body seguindo o exemplo:
 ```
 {
-  "name": "Candidato",
+  "name": "Natália",
   "age": 25,
   "phone": "123456789",
   "state":"São Paulo",
@@ -133,7 +133,7 @@ Essa rota deverá receber um body seguindo o exemplo:
 A requisição sendo realizada com sucesso, receberá a mensagem:
 ```
 {
-    "message": "Thank you for your application, Candidato"
+    "message": "Thank you for your application, Natália"
 }
 ```
 
