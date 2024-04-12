@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "./components/Header";
+const poppis = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   title: "Personal Portfolio",
-  description: "Página desenvolvida para desafio de vaga full stack jr na naranja labs",
+  description:
+    "Página desenvolvida para o desafio de vaga full stack jr na Naranja Labs",
 };
 
 export default function RootLayout({
@@ -16,8 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      {children}
+      <body className={poppis.className}>
+        <Header />
+        {children}
       </body>
     </html>
   );
