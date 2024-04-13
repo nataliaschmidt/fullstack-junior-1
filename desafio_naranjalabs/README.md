@@ -167,7 +167,7 @@ Caso seja realizada uma requisição com o body vazio ou faltando campo, receber
 
 // Requisição
 {
-  "name": "Candidato",
+  "name": "Natália",
   "phone": "123456789",
   "state":"São Paulo",
   "city": "São Paulo"
@@ -176,5 +176,22 @@ Caso seja realizada uma requisição com o body vazio ou faltando campo, receber
 // Retorno
 {
     "message": "Field age is required"
+}
+```
+Caso seja realizada uma requisição com um campo contendo o tipo de dado errado, receberá a mensagem:
+
+```
+// Requisição
+{
+  "name": "Natália",
+  "age: "33",
+  "phone": "123456789",
+  "state":"São Paulo",
+  "city": "São Paulo"
+}
+
+// Retorno
+{
+    "message": "Field 'age' must be a number."
 }
 ```

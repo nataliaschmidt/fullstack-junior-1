@@ -1,8 +1,9 @@
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import jobs from "../database/jobs";
 import { IJob } from "../Interfaces/IJob";
+import { IMessage } from "../Interfaces/IMessage";
 
-export async function GET(req: NextRequest) {
+export async function GET(req: NextRequest): Promise<NextResponse<IJob[] | IJob | IMessage>> {
   const searchParams = req.nextUrl.searchParams;
   const query = searchParams.get("level")?.toLowerCase();
 
@@ -11,11 +12,11 @@ export async function GET(req: NextRequest) {
       const foundQuery = jobs.filter(
         (job: IJob) => job.level.toLowerCase() === query,
       );
-      return Response.json(foundQuery);
+      return NextResponse.json(foundQuery);
     }
-    return Response.json(jobs);
+    return NextResponse.json(jobs);
   } catch (error) {
-    return Response.json({
+    return NextResponse.json({
       message: `${error}`,
     });
   }

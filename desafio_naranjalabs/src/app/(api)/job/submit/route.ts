@@ -1,13 +1,16 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { IJobSubmit } from "../../Interfaces/IJobSubmit";
 import { checkField, checkTypesField, hasAllFields } from "../../validations/validations";
+import { IMessage } from "../../Interfaces/IMessage";
 
-export async function POST(req: NextRequest) {
+
+
+export async function POST(req: NextRequest): Promise<NextResponse<IMessage>> {
   const data: IJobSubmit = await req.json();
 
   const allFields = hasAllFields(data);
   if (!allFields) {
-    return Response.json(
+    return NextResponse.json(
       { message: "Incomplete request body. All fields are required." },
       { status: 400 },
     );
@@ -15,7 +18,7 @@ export async function POST(req: NextRequest) {
 
   const checkTypeFileds = checkTypesField(data);
   if (checkTypeFileds) {
-    return Response.json(
+    return NextResponse.json(
       { message: checkTypeFileds },
       { status: 400 },
     );
@@ -25,18 +28,18 @@ export async function POST(req: NextRequest) {
   try {
     const field = checkField(data);
     if (field) {
-      return Response.json(
+      return NextResponse.json(
         { message: `Field ${field} is required` },
         { status: 400 },
       );
     }
 
-    return Response.json(
+    return NextResponse.json(
       { message: `Thank you for your application, ${data.name}` },
       { status: 200 },
     );
   } catch (error) {
-    return Response.json({
+    return NextResponse.json({
       message: `${error}`,
     });
   }
