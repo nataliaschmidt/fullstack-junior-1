@@ -8,10 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "pink-personal": "#DC0155",
+        "white-hero": "#F4F3F8",
+        "font-color": "#333333",
+      },
+      boxShadow: {
+        "profile-shadow": "0px 24px 50px 0px rgba(13, 12, 56, 0.15)",
       },
     },
   },

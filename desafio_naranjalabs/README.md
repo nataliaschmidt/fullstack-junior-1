@@ -11,12 +11,15 @@ Telefone: (51) 98155-4523
 Email: nataliak.schmidt@gmail.com
 
 # Iniciando a aplicação
+
 - Clone este repositório
+
 ```
 git clone git@github.com:nataliaschmidt/fullstack-junior-1.git
 ```
 
 - Entre na pasta do repositório que você acabou de clonar e navega até a pasta desafio_naranjalabs para rodar os comandos
+
 ```
 cd desafio_naranjalabs
 
@@ -26,9 +29,10 @@ npm run dev
 
 - A aplicação estará rodando na porta 3000
 
-
 # Rotas Back end
+
 ### Para acessar as rotas, é necessário incluir um cabeçalho (headers) com a chave "secret" e o valor "naranja-labs". Caso contrário, a requisição retornará um status 401 e uma mensagem de não autorizado
+
 ```
 
 {
@@ -37,8 +41,10 @@ npm run dev
 
 ```
 
-## Rota /jobs
+## Rota GET /jobs
+
 Retorna todos os trabalhos
+
 ```
 
 [
@@ -70,8 +76,10 @@ Retorna todos os trabalhos
 
 ```
 
-## Rota /jobs?level=Junior
+## Rota GET /jobs?level=Junior
+
 Retorna apenas os trabalho com o level de Junior
+
 ```
 
 [
@@ -97,8 +105,10 @@ Retorna apenas os trabalho com o level de Junior
 
 ```
 
-## Rota /job/[id]
+## Rota GET /job/[id]
+
 Caso pesquise por um trabalho com o id inexistente, retorna uma mensagem de erro
+
 ```
 
 {
@@ -108,6 +118,7 @@ Caso pesquise por um trabalho com o id inexistente, retorna uma mensagem de erro
 ```
 
 Quando o id é existente retorna o trabalho correspondente ao id da pesquisa
+
 ```
 // /job/2
 
@@ -119,8 +130,10 @@ Quando o id é existente retorna o trabalho correspondente ao id da pesquisa
 }
 ```
 
-## Rota /job/submit
+## Rota POST /job/submit
+
 Essa rota deverá receber um body seguindo o exemplo:
+
 ```
 {
   "name": "Natália",
@@ -130,7 +143,9 @@ Essa rota deverá receber um body seguindo o exemplo:
   "city": "São Paulo"
 }
 ```
+
 A requisição sendo realizada com sucesso, receberá a mensagem:
+
 ```
 {
     "message": "Thank you for your application, Natália"
@@ -138,6 +153,7 @@ A requisição sendo realizada com sucesso, receberá a mensagem:
 ```
 
 Caso seja realizada uma requisição com o body vazio ou faltando campo, receberá a mensagem:
+
 ```
 // Requisição
 {}
