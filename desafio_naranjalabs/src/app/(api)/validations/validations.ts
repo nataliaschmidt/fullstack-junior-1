@@ -11,3 +11,26 @@ export function checkField(data: IJobSubmit) {
     if (!(field in data)) return field;
   }
 }
+
+export function checkTypesField(data: IJobSubmit) {
+
+  if (typeof data.name !== 'string') {
+    return "Field 'name' must be a string.";
+  }
+
+  if (typeof data.age !== 'number') {
+    return "Field 'age' must be a number.";
+  }
+
+  if (typeof data.phone !== 'string') {
+    return "Field 'phone' must be a string.";
+  }
+
+  if (typeof data.state !== 'string') {
+    return "Field 'state' must be a string.";
+  }
+
+  if (typeof data.city !== 'string') {
+    return "Field 'city' must be a string";
+  }
+}

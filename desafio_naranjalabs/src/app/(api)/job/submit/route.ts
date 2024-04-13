@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { IJobSubmit } from "../../Interfaces/IJobSubmit";
-import { checkField, hasAllFields } from "../../validations/validations";
+import { checkField, checkTypesField, hasAllFields } from "../../validations/validations";
 
 export async function POST(req: NextRequest) {
   const data: IJobSubmit = await req.json();
@@ -12,6 +12,15 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
+
+  const checkTypeFileds = checkTypesField(data);
+  if (checkTypeFileds) {
+    return Response.json(
+      { message: checkTypeFileds },
+      { status: 400 },
+    );
+  }
+
 
   try {
     const field = checkField(data);
