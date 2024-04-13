@@ -9,7 +9,7 @@ const bebasNeue = Bebas_Neue({
 export default function Left() {
   return (
     <div className="relative flex h-[448px] w-[784px] flex-col">
-      <h3 className="text-2xl font-medium leading-9">Hi, there!</h3>
+      <h2 className="text-2xl font-medium leading-9">Hi, there!</h2>
       <h1
         className={`text-[120px] font-normal leading-[120px] ${bebasNeue.className} `}
       >

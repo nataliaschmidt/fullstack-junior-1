@@ -13,7 +13,7 @@ export default function CardProfile() {
         />
       </div>
       <div>
-        <h2 className="text-2xl font-medium leading-9">Product Designer</h2>
+        <h3 className="text-2xl font-medium leading-9">Product Designer</h3>
         <h4 className="text-lg font-normal leading-[27px]">5 Years</h4>
       </div>
     </div>

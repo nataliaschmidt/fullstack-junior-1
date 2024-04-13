@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Left from "./components/hero/Left";
 import Right from "./components/hero/Right";
+import CardServices from "./components/CardServices";
+import services from './data/services'
+import { Service } from "./types/service";
 
 export default function Home() {
   return (
@@ -26,9 +29,19 @@ export default function Home() {
         height={381.4}
         width={720}
       />
-      <main className="mt-10 flex w-screen items-start justify-center gap-10">
-        <Left />
-        <Right />
+      <main className="mt-10 flex flex-col">
+        <div className="flex w-screen items-start justify-center gap-10">
+          <Left />
+          <Right />
+        </div>
+        <section className="w-[1192px] h-[292px] bottom-5 left-[110px] absolute">
+          <h2 className="text-5xl font-normal leading-[57.6px] mb-10">Our Service</h2>
+          <div className="flex gap-10">
+            {
+              services.map((service: Service)=> <CardServices image={service.image} title={service.title} text={service.text} key={service.title}/>)
+            }
+          </div>
+        </section>
       </main>
     </>
   );

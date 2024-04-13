@@ -11,7 +11,7 @@ export default function CardSatisfaction() {
         height={31}
       />
       <div>
-        <h2 className="text-2xl font-medium leading-9">4.8</h2>
+        <h3 className="text-2xl font-medium leading-9">4.8</h3>
         <h4 className="text-lg font-normal leading-[27px]">Satisfaction</h4>
       </div>
     </div>
