@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppis.className}>
+      <body className={`text-font-color ${poppis.className}`}>
         <Header />
         {children}
       </body>

@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 export default function CardProfile() {
   return (
-    <div className='flex w-[336px] h-[112px] rounded-3xl p-6 gap-4 shadow-profile-shadow absolute z-50 bg-white-hero bottom-6 right-[100px]'>
-      <div className='bg-pink-personal w-16 h-16 shadow-profile-shadow rounded-3xl flex items-center justify-center'>
+    <div className="absolute bottom-6 right-[100px] z-50 flex h-[112px] w-[336px] gap-4 rounded-3xl bg-white-hero p-6 shadow-profile-shadow">
+      <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-pink-personal shadow-profile-shadow">
         <Image
           src="/images/hero_right/user.svg"
           alt="Icon user"

@@ -26,7 +26,7 @@ export default function Home() {
         height={381.4}
         width={720}
       />
-      <main className="mt-10 flex w-screen items-start justify-around">
+      <main className="mt-10 flex w-screen items-start justify-center gap-10">
         <Left />
         <Right />
       </main>

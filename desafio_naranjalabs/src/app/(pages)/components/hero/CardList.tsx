@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 export default function CardList() {
   return (
-    <div className='flex w-[200px] h-[112px] rounded-3xl p-6 gap-4 shadow-profile-shadow absolute z-50 bg-white-hero top-[90px] left-[32px]'>
-      <div className='bg-pink-personal w-16 h-16 shadow-profile-shadow rounded-3xl flex items-center justify-center'>
+    <div className="absolute left-[32px] top-[90px] z-50 flex h-[112px] w-[200px] gap-4 rounded-3xl bg-white-hero p-6 shadow-profile-shadow">
+      <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-pink-personal shadow-profile-shadow">
         <Image
-    src="/images/hero_right/list.svg"
-    alt="Icon list"
+          src="/images/hero_right/list.svg"
+          alt="Icon list"
           width={32}
           height={32}
         />
